@@ -6,7 +6,7 @@ void main() {
 
 String isBalance(String text) {
   List<String> storeText = [];
-  String isBalanced; 
+  String isBalanced;  
   
   for (var sign in text.split("")) {
     if (sign == '(' || sign == '{' || sign == '[') {

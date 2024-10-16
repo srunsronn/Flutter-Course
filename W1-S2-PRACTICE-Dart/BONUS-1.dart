@@ -54,8 +54,10 @@ List<int> advance(int x, int y, Direction dir) {
     y--;
   } else if (dir == Direction.east) {
     x++;
-  } else {
+  } else if (dir == Direction.west) {
     x--;
+  } else{
+    print("Invalid direction");
   }
   return [x, y]; 
 }
