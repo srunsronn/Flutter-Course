@@ -51,9 +51,9 @@ void main() {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(40),
               gradient: LinearGradient(
-                  colors: [Colors.blue[300]!, Colors.blue[600]!],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
+                colors: [Colors.blue[300]!, Colors.blue[600]!],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
               ),
             ),
             child: const Center(
