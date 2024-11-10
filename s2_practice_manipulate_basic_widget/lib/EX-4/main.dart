@@ -12,7 +12,7 @@ void main() {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CustomCard(text: "OOP", color: Colors.blue[100]),
-          CustomCard(text: "DART", color: Colors.blue[300]),
+          CustomCard(text: "DART", color: Colors.blue[300],),
           CustomCard(
             text: "FLUTTER",
             gradient:

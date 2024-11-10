@@ -1,0 +1,8 @@
+Q1 – What type of state do you need to keep?  
+Answer: The type of state that I need to keep in state (int _index=0).
+
+Q2 – Look at the current widget tree: which widget will you warp into your stateful widget? 
+Answer: The widget I will wrap into my stateful widget is Scaffold.
+
+debugShowCheckedModeBanner: false, // Why this line ? Can you explain it ?
+Answer: Because want to remove text DEBUG on the right of AppBar that it displays by default.
