@@ -18,7 +18,7 @@ class _ScorebarState extends State<Scorebar> {
 
   void _increase() {
     setState(() {
-      _width += MediaQuery.of(context).size.width / 10;
+      _width += 50;
       print(_width);
     });
   }
@@ -35,59 +35,53 @@ class _ScorebarState extends State<Scorebar> {
       decoration: BoxDecoration(
         color: Colors.green[400],
       ),
-      padding: const EdgeInsets.all(10),
+      // padding: const EdgeInsets.all(10),
       child: Column(
         children: [
           Card(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-            margin: const EdgeInsets.all(10),
-            child: Padding(
-              padding: const EdgeInsets.all(10),
-              child: Padding(
-                padding: const EdgeInsets.all(10),
-                child: Column(
+            // margin: const EdgeInsets.all(10),
+            child: Column(
+              children: [
+                const Text(
+                  "My Score Card",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    const Text(
-                      "My Score Card",
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    IconButton(
+                      onPressed: () => {},
+                      icon: const Icon(Icons.remove),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        IconButton(
-                          onPressed: () => {},
-                          icon: const Icon(Icons.remove),
-                        ),
-                        IconButton(
-                          onPressed: _increase,
-                          icon: const Icon(Icons.add),
-                        ),
-                      ],
-                    ),
-                    Container(
-                      height: 30,
-                      width: (MediaQuery.of(context).size.width),
-                      decoration: BoxDecoration(
-                        // color: Colors.blue[300],
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(
-                            color: Colors.grey,
-                            width: 0.5,
-                            style: BorderStyle.solid),
-                      ),
-                      child: Row(
-                        children: [
-                          Bar(widths: _width),
-                        ],
-                      ),
+                    IconButton(
+                      onPressed: _increase,
+                      icon: const Icon(Icons.add),
                     ),
                   ],
                 ),
-              ),
+                Container(
+                  height: 30,
+                  width: 502,
+                  decoration: BoxDecoration(
+                    // color: Colors.blue[300],
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(
+                        color: Colors.grey,
+                        width: 0.5,
+                        style: BorderStyle.solid),
+                  ),
+                  child: Row(
+                    children: [
+                      Bar(widths: _width),
+                    ],
+                  ),
+                ),
+              ],
             ),
           )
         ],

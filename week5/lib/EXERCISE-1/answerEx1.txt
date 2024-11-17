@@ -1,0 +1,7 @@
+ Q1. In what scenarios might one approach be more advantageous than another? 
+(in terms of readability, maintainability, performance, etc.)?
+
+Answer:
+    For me I think method 3 (Dedicated function) is more advantageous than another scenarios because:
+        - Readability & maintainability: I think Method 3 (Dedicated Function) is more readable when we do with large of application and     write separate block block of function and call back that it cleans, easies to read and understands. And It also easies to maintain the code by we just modify the block of function.
+        - Performance: Base on I test on online compiler IDE, I see the performance of Dedicated function it can run faster than another.
