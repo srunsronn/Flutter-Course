@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:week5/EXERCISE-3/screen/temperature.dart';
 import 'package:week5/EXERCISE-3/screen/welcome.dart';
-
 
 class TemperatureApp extends StatefulWidget {
   const TemperatureApp({super.key});
@@ -12,10 +12,16 @@ class TemperatureApp extends StatefulWidget {
 }
 
 class _TemperatureAppState extends State<TemperatureApp> {
-  
+  bool isClicked = true;
+
+  void handleChangeScreen() {
+    setState(() {
+      isClicked = !isClicked;
+    });
+  }
+
   @override
   Widget build(context) {
-
     return MaterialApp(
       home: Scaffold(
         body: Container(
@@ -29,7 +35,8 @@ class _TemperatureAppState extends State<TemperatureApp> {
               end: Alignment.bottomRight,
             ),
           ),
-          child: const Welcome(),
+          child:
+              isClicked ? Welcome(isChange: handleChangeScreen) : Temperature(),
         ),
       ),
     );
